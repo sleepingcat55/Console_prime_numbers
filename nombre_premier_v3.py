@@ -1,7 +1,6 @@
 #!/usr/bin/python3.11
 
-# la condition pour Premier : uniquement divisible par lui meme et par 1
-# Attention ! Au dela du nombre 5000, l'ordinateur ralentit (et l'un des core tourne a 100%)
+# Becareful ! Up to 5000 and your computer begin to slow down
 
 def isfirst(chiffre_max):
 	i = chiffre_max
@@ -17,17 +16,15 @@ def isfirst(chiffre_max):
 			cpt += 1
 
 		if(int(x[position_point+1:]) == 0):
-			# le chiffre n'est pas premier vu qu'il a un autre diviseur
-			#print(chiffre_max, " n'est pas premier")
 			return True
 		i -= 1
 
 prime_nb_list = []
-chiffre_max = int(input("Vous voulez la liste de tous les chiffres premier jusqu'a quel nombre ? : "))
-print("Liste des nombres premiers de", chiffre_max, "a 2 :")
+chiffre_max = int(input("Your maximum number to calculate to : "))
+print("Prime numbers list from : ", chiffre_max, "to 2 :")
 while(chiffre_max >= 2):
 	if(isfirst(chiffre_max) is not True):
-		#print(chiffre_max, "est premier")
+		#print(chiffre_max, "is prime")
 		prime_nb_list.append(chiffre_max)
 	chiffre_max -= 1
 
